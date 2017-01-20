@@ -1,2 +1,2 @@
 # Data Structure And Algorithms
-DSA Assignments CSE - 2001
+DSA Assignment Codes CSE - 2001
