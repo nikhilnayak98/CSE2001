@@ -7,12 +7,6 @@
 
 import java.util.Scanner;
 
-/*
- * Name : Nikhil Ranjan Nayak
- * Regd No : 1641012040
- * Desc : Complex number
- */
-
 class Complex {
 	private int real;
 	private int img;
