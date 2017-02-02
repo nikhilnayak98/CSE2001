@@ -123,7 +123,7 @@ class EquilateralTriangle extends Triangle {
 	}
 	
 	public void area() {
-		double area = Math.sqrt(3.0)*s1*s1;
+		double area = Math.sqrt(3.0)*s1*s1/4;
 		System.out.println("Area - " + area);
 	}
 	
@@ -149,7 +149,7 @@ class Rectangle extends Quadrilateral {
 	}
 	
 	public void area() {
-		double area = 2*(s1+s2);
+		double area = s1*s2;
 		System.out.println("Area - " + area);
 	}
 	
