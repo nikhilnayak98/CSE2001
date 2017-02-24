@@ -18,7 +18,7 @@ public class FibonacciNumbers {
 
 	public static int fiboNum(int n) {
 		if(n==1)
-			return 1; 
+			return 0; 
 		if (n == 2)
 			return 1; 
 		return fiboNum(n-1) + fiboNum(n-2);
