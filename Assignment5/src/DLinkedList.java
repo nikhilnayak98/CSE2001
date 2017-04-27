@@ -238,12 +238,6 @@ public class DLinkedList {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Node start=null,end=null;
-		start = create(start);
-		Node r = start;
-		while(r.link!=null) {
-			r = r.link;
-		}
-		end = r;
 		int choice,res;
 		while(true) {
 			System.out.println("\n*****MENU*****" +
@@ -265,7 +259,12 @@ public class DLinkedList {
 				System.out.println("Exit");
 				System.exit(0);
 			case 1:
-				create(start);
+				start = create(start);
+				Node r = start;
+				while(r.link!=null) {
+					r = r.link;
+				}
+				end = r;
 				break;
 			case 2:
 				display(start);
