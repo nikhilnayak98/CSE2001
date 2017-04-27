@@ -95,7 +95,7 @@ public class DLinkedList {
 		int c = count(start);
 		System.out.println("Enter location - ");
 		int loc = sc.nextInt();
-		if(loc==1&&loc<c+1) {
+		if(loc>=1&&loc<c+1) {
 			Node p = new Node();
 			System.out.println("Enter registration number - ");
 			p.regd_no = sc.nextInt();
@@ -129,7 +129,7 @@ public class DLinkedList {
 	public static int count(Node start) {
 		Node p = start;
 		int c = 0;
-		while(p.link!=null) {
+		while(p!=null) {
 			c++;
 			p = p.link;
 		}
@@ -213,24 +213,24 @@ public class DLinkedList {
 					start.prev=null;
 				}
 			}
-		}
-		else if(loc==c) {
-			if(start.link==null)
-				start=end=null;
+			else if(loc==c) {
+				if(start.link==null)
+					start=end=null;
+				else {
+					end=end.prev;
+					end.link=null;
+				}
+			}
 			else {
-				end=end.prev;
-				end.link=null;
+				Node p = start;
+				int cnt = 1;
+				while(cnt<loc) {
+					cnt++;
+					p=p.link;
+				}
+				p.prev.link=p.link;
+				p.link.prev=p.prev;
 			}
-		}
-		else {
-			Node p = start;
-			int cnt = 1;
-			while(cnt<loc) {
-				cnt++;
-				p=p.link;
-			}
-			p.prev.link=p.link;
-			p.link.prev=p.prev;
 		}
 		return start;
 	}
